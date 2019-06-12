@@ -3,4 +3,6 @@
     <string name="question_heading">Question - %d</string>
     <string name="submit">Submit</string>
     <string name="current_score">Current Score: %d</string>
+    <string name="bonus_question_text">Bonus Question</string>
+    <string name="answer">Please input your answer here</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.content.Context;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         currentScore.setText(getResources()
                 .getString(R.string.current_score, scoreCounter));
+
+
+
     }
 
     private void setNewQuestionAfterDelay() {
@@ -140,5 +145,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ex.printStackTrace();
         }
         return listOfQuestionsAndOptions;
-    }
+        }
+
 }
