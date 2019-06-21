@@ -1,6 +1,6 @@
 package com.example.android.quizapp;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -66,22 +65,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int selectedOptionPosition = radioGroup.indexOfChild(selected);
         imageView.setVisibility(View.VISIBLE);
         questionCounter++;
-        if (radioGroup.getTag().equals(selectedOptionPosition)) {
-            imageView.setImageResource(R.drawable.correct);
-            scoreCounter++;
+        if (questionCounter <= 6) {
+            if (radioGroup.getTag().equals(selectedOptionPosition)) {
+                imageView.setImageResource(R.drawable.correct);
+                scoreCounter++;
+            } else {
+                imageView.setImageResource(R.drawable.wrong);
+            }
+
+            if (questionCounter <= questionDataMap.size()) {
+                setNewQuestionAfterDelay();
+            }
+
+            currentScore.setText(getResources()
+                    .getString(R.string.current_score, scoreCounter));
         } else {
-            imageView.setImageResource(R.drawable.wrong);
+            Intent bonusQuestionIntent = new Intent(this, BonusQuestionActivity.class);
+            bonusQuestionIntent.putExtra("ScoreCounter", scoreCounter);
+            startActivity(bonusQuestionIntent);
         }
-
-        if (questionCounter <= questionDataMap.size()) {
-            setNewQuestionAfterDelay();
-        }
-
-        currentScore.setText(getResources()
-                .getString(R.string.current_score, scoreCounter));
-
-
-
     }
 
     private void setNewQuestionAfterDelay() {
@@ -145,6 +147,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ex.printStackTrace();
         }
         return listOfQuestionsAndOptions;
-        }
+    }
 
 }
