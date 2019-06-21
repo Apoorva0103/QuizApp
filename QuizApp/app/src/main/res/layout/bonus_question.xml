@@ -17,19 +17,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="12dp" />
+            app:layout_constraintGuide_begin="@dimen/margin" />
 
         <android.support.constraint.Guideline
             android:id="@+id/end_vertical_guideline"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="12dp" />
+            app:layout_constraintGuide_end="@dimen/margin" />
 
 
         <TextView
             android:id="@+id/curr_score"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin"
             android:textColor="@android:color/holo_orange_dark"
@@ -50,32 +50,37 @@
             app:layout_constraintTop_toBottomOf="@id/curr_score" />
 
         <TextView
-            android:id="@+id/question"
-            android:layout_width="wrap_content"
+            android:id="@+id/bonus_question"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
             android:layout_marginBottom="@dimen/margin"
             android:textAlignment="center"
             android:textSize="@dimen/question_heading"
+            android:text="@string/bonus_question"
             app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
             app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
             app:layout_constraintTop_toBottomOf="@id/heading" />
 
         <EditText
-            android:id="@+id/bonus_question"
+            android:id="@+id/bonus_answer_space"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/answer"
-            android:inputType="textMultiLine" />
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/bonus_question"
+            android:inputType="textPersonName" />
+
         <Button
-            android:id="@+id/submit_button"
+            android:id="@+id/submit_button_bonus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
             android:text="@string/submit"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/radio_group" />
+            app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+            app:layout_constraintTop_toBottomOf="@id/bonus_question" />
 
         <ImageView
             android:id="@+id/correct_or_wrong_iv"
@@ -86,7 +91,7 @@
             android:visibility="gone"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+            app:layout_constraintTop_toBottomOf="@+id/submit_button_bonus" />
 
 
     </android.support.constraint.ConstraintLayout>

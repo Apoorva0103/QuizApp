@@ -1,6 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/start_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/margin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/end_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/margin" />
+
+    <TextView
+        android:id="@+id/survey_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_question"
+        android:layout_margin="@dimen/margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_1"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintTop_toBottomOf="@id/survey_question"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_2"
+        app:layout_constraintTop_toBottomOf="@id/checkbox1"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_3"
+        app:layout_constraintTop_toBottomOf="@id/checkbox2"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_4"
+        app:layout_constraintTop_toBottomOf="@id/checkbox3"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_5"
+        app:layout_constraintTop_toBottomOf="@id/checkbox4"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_6"
+        app:layout_constraintTop_toBottomOf="@id/checkbox5"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_7"
+        app:layout_constraintTop_toBottomOf="@id/checkbox6"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_option_8"
+        app:layout_constraintTop_toBottomOf="@id/checkbox7"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        />
+
+    <Button
+        android:id="@+id/submit_button_survey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/submit"
+        app:layout_constraintStart_toEndOf="@id/start_vertical_guideline"
+        app:layout_constraintEnd_toStartOf="@id/end_vertical_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </android.support.constraint.ConstraintLayout>
