@@ -1,7 +1,6 @@
 1,Who is considered the father of computers?,Bill Gates-Alan Turing-Steve Jobs-Charles Babbage,3
-2,When was the Sony PlayStation 3 released?, 2012-2000-2009-2006,3
+2,When was the Sony PlayStation 3 released?,2012-2000-2009-2006,3
 3,Which inventor introduced the telephone in 1876?,Thomas Watson-Michael Faraday-Graham Bell-Thomas Edison,2
-4,What does AI Stands for?, Artifical Intelligance-Advanced Icon-Automated Icon-Active Interface,0
-5,The Techonology industry center known as "Silicon Valley" is in which state of USA?, Texas-Colorado-Arizona-California,3
-6,What was the first company to produce a handheld mobile telephone?, Sony Ericsson-Samsung-Nokia-Motorola,3
-7, Who has been appointed as the new chairman of Central Board of Indirect taxes and Customs?,S Ramesh
+4,What does AI Stands for?,Artifical Intelligance-Advanced Icon-Automated Icon-Active Interface,0
+5,The Techonology industry center known as "Silicon Valley" is in which state of USA?,Texas-Colorado-Arizona-California,3
+6,What was the first company to produce a handheld mobile telephone?,Sony Ericsson-Samsung-Nokia-Motorola,3

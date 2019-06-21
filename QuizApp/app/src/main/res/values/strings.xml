@@ -4,5 +4,17 @@
     <string name="submit">Submit</string>
     <string name="current_score">Current Score: %d</string>
     <string name="bonus_question_text">Bonus Question</string>
-    <string name="answer">Please input your answer here</string>
+    <string name="answer">Answer here</string>
+    <string name="bonus_question">Who has been appointed as the new chairman of Central Board of Indirect taxes and Customs?</string>
+    <string name="ans_to_bonus_question">S Ramesh</string>
+    <string name="survey_question">Select all the categories you would like to see the upcoming quiz on?</string>
+    <string name="survey_option_1">Science</string>
+    <string name="survey_option_2">Geography</string>
+    <string name="survey_option_3">Politics</string>
+    <string name="survey_option_4">Sports</string>
+    <string name="survey_option_5">Current Affairs</string>
+    <string name="survey_option_6">Biology</string>
+    <string name="survey_option_7">History</string>
+    <string name="survey_option_8">Cinema &amp; Entertainment</string>
+    <string name="categories_selected">Preferred categories are: %s</string>
 </resources>
